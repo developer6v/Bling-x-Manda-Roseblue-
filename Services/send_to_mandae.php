@@ -3,7 +3,7 @@
 
 function send_order_mandae ($customerId, $items) {
     // Informações API
-    $urlApi = "https://sandbox.api.mandae.com.br/v2/";
+    $urlApi = "https://api.mandae.com.br/v2/";
     $urlApiAddOrder = "${urlApi}orders/add-parcel";
     $token = "b29d6e5384b5d0f6c515f07d764cbbb0";
     $apiCustomerId = "BF50B91752284407A16E09901A3B2C34";
@@ -130,9 +130,9 @@ function send_order_mandae ($customerId, $items) {
     $response = curl_exec($ch);
 
     if (curl_errno($ch)) {
-        echo 'Erro: ' . curl_error($ch);
+        return 'Erro: ' . curl_error($ch);
     } else {
-        echo 'Resposta: ' . $response;
+        return 'Resposta: ' . $response;
     }
     curl_close($ch);
 
