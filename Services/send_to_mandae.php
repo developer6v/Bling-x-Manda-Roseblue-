@@ -1,12 +1,12 @@
 <?php
 
 
-function send_order_mandae ($customerId, $items) {
+function send_order_mandae ($items) {
     // Informações API
     $urlApi = "https://api.mandae.com.br/v2/";
     $urlApiAddOrder = "${urlApi}orders/add-parcel";
     $token = "b29d6e5384b5d0f6c515f07d764cbbb0";
-    $apiCustomerId = "BF50B91752284407A16E09901A3B2C34";
+    $customerId = "BF50B91752284407A16E09901A3B2C34";
     $prefixoRastreamento = "RBJ";
 
 
